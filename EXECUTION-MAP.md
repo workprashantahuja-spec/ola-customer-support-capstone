@@ -1,6 +1,6 @@
 # Ola capstone execution map
 
-Current handoff supersedes the older Next execution paragraph below: Portions 10A and 10B are complete. Read README.md, AUDIT10A.md, and PORTION10B.md. Continue Portion 10C on Terra Medium for final local Git preparation and the business walkthrough before publication.
+Current handoff supersedes the older Next execution paragraph below: Portions 10A–10C are complete. Read README.md, BUSINESS-WALKTHROUGH.md, AUDIT10A.md, and GITHUB-PUBLISHING.md. The remaining work is public GitHub publication and LMS submission.
 
 Prepared 9 September 2026. Submission: Sunday 13 September, 11:59 PM according to the course orientation; confirm the portal timezone at submission. Working-version target: Friday 11 September. This is a target, not a guarantee.
 
@@ -22,8 +22,8 @@ The assistant owns implementation, integration, debugging, measurement, executio
 | 6 | Independent answer review | Pass the draft and original evidence to a real two-agent AutoGen review. Bound the conversation; return a typed verdict. Demonstrate an unchanged approval and a correction of an intentionally unsupported claim. | Sol Medium; High only for a specific unresolved integration problem | 14 built and verified |
 | 7 | Access and request records | FastAPI health, ask, and session-reset HTTP routes plus a WebSocket chat route. Each request/message is logged after masking with a trace ID and timing; disconnects are handled safely. | Terra Medium | 11–12 built and verified |
 | 8 | Permissions, limits and repeated questions | All four governance layers are applied. Only the Lookup agent can receive the ticket tool; Medium risk is justified; a 300-word request is rejected before CrewAI. A normalized repeat cache hit avoids a second retrieval and generation; ticket/session data is excluded and a knowledge/config namespace prevents stale reuse. | Sol Medium | 15–16 built and verified |
-| 9 | Whole-project quality check | Fifteen API requests cover all 12 topics plus ticket, fallback, and injection cases. Every required metric is recorded per query and averaged. The post-audit runner passes all 14 commands, including 44 main tests, 11 dataset/retrieval tests, every verifier, audit probes, and dependency checks. | Sol Medium for measured evaluation; Astra Medium used for the bounded final audit | 13 and integration verification built and passed |
-| 10 | Submission and your walkthrough | README, setup instructions, execution transcripts, broad logging, and a clean installation are complete. Prepare a public GitHub repository and explain sample journeys in plain language. Match the exact LMS domain label with the repo, verify public access and submit its single link. | Terra Medium | Local packaging passed; publication, walkthrough and LMS action remain |
+| 9 | Whole-project quality check | Fifteen API requests cover all 12 topics plus ticket, fallback, and injection cases. Every required metric is recorded per query and averaged. All 13 full-project commands pass offline, including 43 main tests, 11 dataset/retrieval tests, every verifier, and dependency checks. | Sol Medium for measured evaluation; Astra Medium reserved for the next bounded final audit | 13 and integration verification built and passed |
+| 10 | Submission and your walkthrough | Finish README, setup instructions and actual execution transcripts; check a clean installation, prepare a public GitHub repository and explain sample journeys in plain language. Match the exact LMS domain label with the repo, verify public access and submit its single link. | Terra Medium | Delivery pending; user laptop setup remains unverified |
 
 ## Working order and timing
 
@@ -73,4 +73,4 @@ Official current model-selection reference: https://learn.chatgpt.com/docs/model
 
 ## Next execution
 
-Continue with Portion 10C on Terra Medium: prepare the final local Git repository and plain-language business walkthrough. After review and explicit approval, publish through Prashant's GitHub access, verify the public URL, and leave the LMS submission to his account.
+Create the public GitHub repository from this prepared local Git project, verify that its README and transcripts are visible without signing in, then submit its single URL in LMS under the exact Ola track name.

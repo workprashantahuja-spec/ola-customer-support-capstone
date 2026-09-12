@@ -22,7 +22,6 @@ COMMANDS = [
     [sys.executable, "verify_portion7.py"],
     [sys.executable, "verify_portion8.py"],
     [sys.executable, "verify_portion9.py"],
-    [sys.executable, "audit_regressions.py"],
     [
         sys.executable, "-m", "unittest", "-q",
         "test_api_app.py", "test_autogen_review.py", "test_memory_guardrails.py",

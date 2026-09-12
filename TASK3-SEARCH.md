@@ -4,7 +4,7 @@ Track: **Ola — Business Operations / Customer Support**.
 
 Task 3 is implemented and tested with the 12 fictional policy documents from Task 2. It converts their chunks into real local SentenceTransformers embeddings, writes them to two separate persistent ChromaDB collections using `collection.upsert()`, and retrieves source passages from either collection.
 
-This task returns passages and their sources. Generated answers, the calibrated out-of-scope fallback, and precision/recall evaluation belong to Tasks 4 and 5; those later tasks are now complete.
+This task returns passages and their sources. Generated answers, the calibrated out-of-scope fallback, and precision/recall evaluation belong to Tasks 4 and 5 and are still pending.
 
 ## What was built
 

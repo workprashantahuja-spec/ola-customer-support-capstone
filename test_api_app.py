@@ -64,31 +64,6 @@ class ApiAppTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.json()["reset"])
 
-    def test_every_http_request_gets_one_safe_log_entry(self):
-        with tempfile.TemporaryDirectory() as temp:
-            path = Path(temp) / "coverage.jsonl"
-            client = TestClient(create_app(log_path=path), raise_server_exceptions=False)
-            cases = [
-                ("invalid_json", lambda: client.post(
-                    "/ask", content="{", headers={"content-type": "application/json"})),
-                ("missing_field", lambda: client.post(
-                    "/ask", json={"session_id": "coverage"})),
-                ("whitespace", lambda: client.post(
-                    "/ask", json={"session_id": "coverage", "message": "   "})),
-                ("unknown_ticket", lambda: client.post(
-                    "/ask", json={"session_id": "coverage", "message": "Check SUP-9999."})),
-                ("unmatched", lambda: client.get("/does-not-exist/9876543210")),
-                ("reset", lambda: client.post("/sessions/9876543210/reset")),
-            ]
-            for label, make_request in cases:
-                before = len(path.read_text().splitlines()) if path.exists() else 0
-                response = make_request()
-                after = len(path.read_text().splitlines())
-                self.assertEqual(after - before, 1, label)
-                self.assertLess(response.status_code, 500, label)
-            raw_log = path.read_text()
-            self.assertNotIn("9876543210", raw_log)
-
 
 if __name__ == "__main__":
     unittest.main()

@@ -23,7 +23,7 @@ The WebSocket catches `WebSocketDisconnect`. A customer closing their connection
 
 ## Request logging
 
-`request_logging.py` writes one JSON object per HTTP request or WebSocket chat message to a JSON-Lines file. Each record has a UUID trace ID, UTC timestamp, endpoint, timing in milliseconds, outcome, and only the sanitized request text. An HTTP middleware supplies a safe fallback record for malformed bodies, framework routes, unmatched URLs, and unexpected failures. Application routes mark their own record as complete so the middleware does not duplicate it.
+`request_logging.py` writes one JSON object per processed HTTP request or WebSocket chat message to a JSON-Lines file. Each record has a UUID trace ID, UTC timestamp, endpoint, timing in milliseconds, outcome, and only the sanitized request text.
 
 The same input guardrail runs before CrewAI, memory, AutoGen, and logging. Supported phone, card-last-4, PAN, Aadhaar, and labelled bank-account formats are masked before the log writer sees them. Names, addresses, and arbitrary free text are not claimed as reliably detectable.
 
@@ -36,4 +36,4 @@ python verify_portion7.py
 python -m unittest test_api_app.py
 ```
 
-The verifier makes real HTTP and WebSocket calls through FastAPI's test client. It proves that the WebSocket retains ticket context, disconnects safely, and leaves the server available. The API tests also cover invalid JSON, missing and whitespace fields, an unknown ticket, an unmatched URL, and a session ID shaped like a phone number. Each produces exactly one record, and the log contains none of the fabricated raw identifiers.
+The verifier makes real HTTP and WebSocket calls through FastAPI's test client. It proves that the WebSocket retains ticket context, disconnects safely, and leaves the server available. It also checks the JSONL file has one record for each processed request and contains none of the fabricated raw phone, PAN, Aadhaar, or bank-account values.

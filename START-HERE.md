@@ -1,6 +1,6 @@
-# Capstone starter
+# Ola customer-support capstone
 
-Start with README.md. Portion 10B is complete: final documentation, broad request logging, a clean dependency/model/index setup, and the post-audit full run all passed. Read AUDIT10A.md for limits and PORTION10B.md for the clean-setup record. Next is Portion 10C on Terra Medium: local Git preparation and a plain-language business walkthrough before public GitHub publication.
+Start with README.md and BUSINESS-WALKTHROUGH.md. The audit, documentation, clean setup, local Git preparation, and business walkthrough are complete. Read AUDIT10A.md before relying on earlier perfect-score language: results apply only to the selected acceptance set. The remaining work is to create and publish the public GitHub repository, then submit its URL in LMS.
 
 Confirmed track: **Ola — Business Operations / Customer Support**, selected by Prashant on 6 September 2026. Use the matching Ola domain in LMS Question 1 and the submitted repository.
 
@@ -12,7 +12,7 @@ A support agent that answers policy questions using our written knowledge base, 
 
 The supplied brief requires one public GitHub repository containing code, data, knowledge-base text, a README, and real execution transcripts. It says images, PDFs, slide decks, video, and audio are not accepted deliverables. Graded runs must work with a deterministic `MOCK_LLM`, with no API keys or runtime network access. Local SentenceTransformers embeddings and ChromaDB are required. Download/install dependencies and the embedding model during setup, before offline graded runs.
 
-Source: the user-supplied **Pasted text(20260829-212814).txt**, titled *Final Capstone — Ola Domain Support Agent (CrewAI)*, uploaded 29 August 2026. The user previously reported that later classes/Q&A allow AI assistance and require understanding the submitted system. The completed local build follows that clarification; publication and submission remain unfinished.
+Source: the user-supplied **Pasted text(20260829-212814).txt**, titled *Final Capstone — Ola Domain Support Agent (CrewAI)*, uploaded 29 August 2026. The user previously reported that later classes/Q&A allow AI assistance and require understanding the submitted system. The completed local build follows that clarification; public publication and final submission remain.
 
 ## First task delivered: the dataset
 
@@ -74,7 +74,7 @@ This first file needs no virtual environment or package installation. Create a d
 
 ## Complete requirements checklist
 
-Tasks 1–16, the final rubric audit, README, and clean-install check are delivered and verified. Repository publication and LMS submission remain. Sentence-based retrieval is the selected strategy after the formal comparison.
+Tasks 1–16 are delivered and verified. The final rubric audit, README, clean-install check, repository publication, and LMS submission remain. Sentence-based retrieval is the selected strategy after the formal comparison.
 
 | Task | What must be delivered and demonstrated | Status |
 | --- | --- | --- |
@@ -133,7 +133,7 @@ The generated ticket dataset does not contain severity, creation timestamps, rid
 
 See [TASK3-SEARCH.md](TASK3-SEARCH.md) for exact Windows setup commands, the splitting rules, tested dependency versions, and measured search results. `rag_index.py` builds the two persistent Chroma collections and retrieves source passages from either one. The starter includes actual execution evidence in `transcripts/task3_search_check.json`.
 
-The same local MiniLM model creates real 384-dimensional embeddings for both indexes. The fixed strategy produced 31 overlapping chunks; the sentence strategy produced 36 chunks. Both returned the correct policy first for sample questions on credits, log retention, and Sunday support. Later portions completed grounded answers and the out-of-scope fallback.
+The same local MiniLM model creates real 384-dimensional embeddings for both indexes. The fixed strategy produced 31 overlapping chunks; the sentence strategy produced 36 chunks. Both returned the correct policy first for sample questions on credits, log retention, and Sunday support. Generated answers and the out-of-scope fallback are the next task.
 
 ## Work schedule
 
@@ -150,4 +150,4 @@ Updated 10 September: Portion 9 is complete. Use [EXECUTION-MAP.md](EXECUTION-MA
 
 ## Next session
 
-Use Terra Medium for Portion 10C: prepare the final local Git repository and a plain-language business walkthrough. Public GitHub publication needs Prashant's final approval and account access; the LMS link submission remains his account action.
+The next task is Portion 10A: use Astra Medium for one bounded final-rubric audit of the completed system, then repair any confirmed gaps before final packaging. Use `PROGRESS.md` as the handoff checkpoint between turns and models.

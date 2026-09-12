@@ -1,6 +1,6 @@
 # Ola capstone progress checkpoint
 
-Last updated: after Portion 10B clean setup and post-audit verification. Read README.md first and AUDIT10A.md for the audit limits.
+Last updated: after Portion 10C local Git and business-walkthrough preparation. Read README.md first and AUDIT10A.md for audit limits.
 
 ## Completed
 
@@ -14,13 +14,13 @@ Last updated: after Portion 10B clean setup and post-audit verification. Read RE
 - Portion 7 / Tasks 11–12: FastAPI supplies health, ask, and session-reset HTTP routes plus a multi-turn WebSocket chat route. Disconnects are handled cleanly. Each HTTP request and chat message receives a trace ID, timing, and one masked JSON-Lines record; a six-record route exercise proves the pipeline, review, session memory, safe logs, and disconnect behavior.
 - Portion 8 / Tasks 15–16: all four course governance layers are documented and connected to implementation. A code allowlist blocks non-Lookup agents from receiving the ticket tool; the system is justified as Medium risk. A 300-word request is rejected before CrewAI under token/reference-cost limits. A normalized repeated policy question produces a real cache hit, leaving both retrieval and generation counters at one.
 - Portion 9 / Task 13 and integration: 15 requests ran through the complete API pipeline, covering all 12 handbook topics, a fabricated ticket, an out-of-scope query, and a prompt-injection attack. The deterministic MOCK_LLM judge reported 5.00/5 averages for Accuracy, Grounding, Completeness, and Safety on this controlled set.
-- Portion 10B: the final README and server launcher are complete; all HTTP paths now receive one safe fallback log when application logging does not cover them. A brand-new environment installed the pinned dependencies and model, rebuilt both indexes, and passed the post-audit runner: 14/14 commands, 44 main tests, 11 dataset/retrieval tests, and dependency checks.
+- Portions 10B–10C: final documentation, full logging coverage, clean setup, post-audit verification, GitHub publishing instructions, and a plain-language business walkthrough are complete. The clean setup passed 14/14 commands, including 44 main tests and 11 retrieval/data tests.
 
 ## Next task
 
-Portion 10A audit and Portion 10B packaging are complete. Earlier perfect evaluation claims remain limited to a selected acceptance set. Budget is a simulated preflight estimate, not actual aggregate token accounting.
+Portion 10A audit and Portions 10B–10C packaging are complete. Earlier perfect evaluation claims are limited to a selected acceptance set. Budget is a simulated preflight estimate, not actual aggregate token accounting.
 
-Next: Portion 10C on **Terra Medium**. Prepare the local Git repository and plain-language business walkthrough. Then, with Prashant's final approval and connected GitHub access, publish the single public repository and verify its URL. LMS submission remains Prashant's account action.
+Next: publish the prepared repository through Prashant's GitHub account, then submit its public URL in LMS.
 
 ## Connections that must be preserved
 
@@ -32,4 +32,4 @@ Next: Portion 10C on **Terra Medium**. Prepare the local Git repository and plai
 
 ## Remaining portions
 
-10. Local rubric audit, README, logging coverage, clean setup and post-audit verification are complete. Public GitHub repository and LMS submission remain.
+10. Local audit, README, clean setup, Git preparation, and business walkthrough are complete. Public GitHub repository and LMS submission remain.
